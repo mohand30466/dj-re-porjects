@@ -1,13 +1,20 @@
-import React from 'react'
+import { React, useContext } from 'react'
+import { Usercontex } from '../useContex/Contex'
 
 export default function Userprofile() {
-    return (
-        <div>
-            <h1>
-            Welcome to user profile page
+
+    const userinfo = useContext(Usercontex)
+    console.log(userinfo.token);
+    return ( <
+        div >
+        <
+        h1 >
+        Welcome to user profile page <
+        /h1>
 
 
-            </h1>
-        </div>
+        <
+        /
+        div >
     )
 }
