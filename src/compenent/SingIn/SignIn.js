@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { Api } from "../api/Api";
-import { Usercontex } from "../useContex/Contex";
+import { useCookies } from "react-cookie";
 
 
 const SignIn = () => {
@@ -9,29 +9,22 @@ const SignIn = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [msg, setMsg] = useState('')
-    const {
-        token,
-        setToken
-    } = useContext(Usercontex)
+    const [token, setToken] = useCookies(["mykey"])
+
 
 
     useEffect(() => {
-        if (token) {
-            window.location.href = "profile"
-
-        }
+        if (token.mykey === "undefined") console.log("try again");
+        else if (token.mykey) window.location.href = "profile"
 
     }, [token])
 
     const signinClicked = () => {
         Api.SignInUser({ email, password })
-            .then(res => setToken(res.key))
+            .then(res => setToken("mykey", res.key))
             .then(error => console.log(error))
 
     }
-
-
-
 
     return ( <
         div >

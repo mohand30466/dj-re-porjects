@@ -1,10 +1,10 @@
-import { React, useContext } from 'react'
-import { Usercontex } from '../useContex/Contex'
+import { React } from 'react'
+
 
 export default function Userprofile() {
 
-    const userinfo = useContext(Usercontex)
-    console.log(userinfo.token);
+
+
     return ( <
         div >
         <

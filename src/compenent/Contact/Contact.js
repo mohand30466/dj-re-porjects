@@ -1,20 +1,24 @@
 import {
     React,
-    useContext
-} from 'react';
 
-import { Usercontex } from "../useContex/Contex";
+} from 'react';
+import { useCookies } from 'react-cookie';
+
+
+
+
 
 
 
 
 const Contact = () => {
-    const x = useContext(Usercontex)
+    const [token] = useCookies([])
 
     return ( <
         div >
         <
-        h1 > hello from Contact < /h1>    <
+        h1 > hello from Contact < /h1>  <
+        h1 > { token.mykey } < /h1>    <
 
         /
         div >
