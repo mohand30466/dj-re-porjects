@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.logout{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: purple;
+  color: aliceblue;
+  width: 5rem;
+  height: 2.1rem;
+  border-radius: 5px;
+}
