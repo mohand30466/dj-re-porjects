@@ -12,11 +12,11 @@ const SignUp=()=>{
     const [password2, setPassword2]=useState('')
     const [token, setToken]=useState('')
 
-    const x = token.key?window.location.href="/account":token.email||token.password1|| "Please Inter Right Info"
+    const x = token.key?window.location.href="/account":token.email||token.password1|| "Please Enter Right Info"
 
     console.log(token);
     useEffect(()=>x)
-
+ 
    const signupClicked = () => {
 
     Api.RegesterUser({email,password1,password2})
