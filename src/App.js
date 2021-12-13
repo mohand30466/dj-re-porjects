@@ -8,7 +8,10 @@ import SignIn from "./compenent/SingIn/SignIn";
 import SignUp from "./compenent/SignUp/SignUp";
 import Account from "./compenent/Account/Account";
 import Userprofile from "./compenent/Userprofile/Userprofile";
+import Emailconfirmation from "./compenent/EmailConfirmation/Emailconfirmation"
+import Resetpassword from "./compenent/Resetpassword/Resetpassword";
 import { CookiesProvider } from "react-cookie";
+
 
 import "./App.css";
 
@@ -26,6 +29,9 @@ function App() {
             <Route path="signUp" element={<SignUp />} />{" "}
             <Route path="account" element={<Account />} />{" "}
             <Route path="home" element={<Userprofile />} />
+            <Route path="confirm" element={<Emailconfirmation />} />
+            <Route path="restpassword" element={<Resetpassword />} />
+
           </Routes>{" "}
         </BrowserRouter>
       </CookiesProvider>

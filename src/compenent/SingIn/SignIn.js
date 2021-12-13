@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Api } from "../api/Api";
 import { useCookies } from "react-cookie";
+import { Container } from "react-bootstrap";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -24,8 +25,12 @@ const SignIn = () => {
   const promptUser = () => setMsg("email or password is incorrect");
 
   return (
-    <>
-      <form onSubmit={signinClicked}>
+    <Container className="bg-white cont">
+      <form onSubmit={signinClicked} className=" col-sm-5 ">
+        <div id="emailHelp" className="form-text text-center">
+          <h3>WELCOME BACK</h3>
+        </div>
+
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
             Email address
@@ -55,51 +60,39 @@ const SignIn = () => {
           />
         </div>
         <div className="mb-3 form-check">
-          <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+          <input
+            type="checkbox"
+            className="form-check-input"
+            id="exampleCheck1"
+          />
           <label className="form-check-label" htmlFor="exampleCheck1">
-            Check me out
+            Remember Me!
           </label>
         </div>
-        <button type="submit" onClick={signinClicked} className="btn btn-primary">
-          Submit
-        </button>
         <p> {msg} </p>
-        <Link to="/signUp">
-          if you dont have account click here to sign up{" "}
-        </Link>
+        <div className="d-grid gap-2">
+          <button
+            className="btn-lg"
+            type="submit"
+            onClick={signinClicked}
+            className="btn btn-primary"
+          >
+            Sign In
+          </button>
+        </div>
+
+        <div className="togrlsign">
+          <Link to="/signUp">
+            If you dont have account click here to sign up
+          </Link>
+        </div>
+        <div className=" forgetpassword">
+          <Link to="/restpassword">
+            <p>Forget password </p>
+          </Link>
+        </div>
       </form>
-    </>
+    </Container>
   );
 };
 export default SignIn;
-
-{
-  /* <h1> hello this is Signin page </h1>
-<div className="email">
-  <input
-    type="email"
-    onChange={(e) => setEmail(e.target.value)}
-    value={email}
-    placeholder="inter your email"
-  />
-</div>{" "}
-<div className="password1">
-  <input
-    type="password"
-    onChange={(e) => setPassword(e.target.value)}
-    value={password}
-    placeholder="repeat your password1"
-  />
-</div>{" "}
-<div className="submit">
-  <button onClick={signinClicked}> Sign in </button>{" "}
-</div>
-<p> {msg} </p> 
-<p> forget password </p>{" "}
-<p>
-  {" "}
-  <Link to="/signUp">
-    if you dont have account click here to sign up{" "}
-  </Link>
-</p> */
-}
