@@ -5,6 +5,11 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  background-color: rgb(159, 166, 172);
+}
+a{
+  color: white;
+  text-decoration: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -47,15 +52,7 @@
   height: 2.1rem;
   border-radius: 5px;
 }
-
-.cont{
-  height: 90vh;
-}
-.togrlsign{
-  margin-top: 1.3rem;
-}
-.forgetpassword{
+.cont {
   margin-top: 4rem;
-
 }
 

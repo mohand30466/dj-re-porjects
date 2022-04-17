@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@200;300;400;&display=swap');
+
+
+#body{
+    font-family: 'Smooch Sans', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x:hidden ;
+   
+   
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.HomeContainer{
+    height: 32.6rem;
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) ), url("https://www.gainedgeconsulting.com/wp-content/uploads/2018/06/Outsourcing.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    /* align-items: center; */
+    position: relative;
 }
